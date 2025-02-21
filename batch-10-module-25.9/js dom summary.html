@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM SUMMARY</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event Handlers</title>
+</head>
+<body>
+
+    <h1>Final DOM Event Handlers</h1>
+
+    <!-- This heading text will be updated when clicking buttons -->
+    <h3 id="handler-status">default text</h3>
+
+    <!-- First button using onclick attribute -->
+    <button onclick="handleOnClick()">handle event by add onclick function</button>
+
+    <!-- Second button using addEventListener -->
+    <button id="event-listener">handle event by addEventListener</button>
+
+    <!-- Paragraph to display user input -->
+    <p id="input-text-display">default input text</p>
+
+    <!-- Input field where users type text -->
+    <input id="input-field" type="text">
+
+    <!-- Button to update paragraph text with input value -->
+    <button id="btn-update">update</button>
+
+    <script>
+        // Function for first button (onclick method)
+        function handleOnClick() {
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Handled by function attached to onclick attribute';
+        }
+
+        // Adding event listener for the second button
+        document.getElementById('event-listener').addEventListener('click', function() {
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Text updated by event listener button';
+        });
+
+        // Adding event listener for updating text from input field
+        document.getElementById('btn-update').addEventListener('click', function() {
+            const inputField = document.getElementById('input-field'); // Select input field
+            const inputText = inputField.value; // Get user input
+            const p = document.getElementById('input-text-display'); // Select paragraph
+            p.innerText = inputText; // Update paragraph with user input
+            inputField.value = ''; // Clear input field after updating text
+        });
+    </script>
+
+</body>
+</html>
+
+</body>
+</html>
