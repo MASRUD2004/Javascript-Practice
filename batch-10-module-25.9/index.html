@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUMMARY</title>
+</head>
+<body>
+    <main id="main-container">
+        <section>
+            <h1 class="section-title">section title-1</h1>
+            <ul>
+                <li>list item-1</li>
+                <li>list item-2</li>
+                <li>list item-3</li>
+                <li>list item-4</li>
+            </ul>
+        </section>
+        <button onclick="console.log(' 65')">button</button>
+
+        <!-- system 1:inline javascript -->
+        <button onclick="document.body.style.backgroundColor='aqua'">Aqua</button>
+        <br>
+
+
+        <!-- system 2:code in function in script tagd -->
+        <button onclick="makeRed()">make red</button>
+        <section id="second-section">
+            <h1 class="section-title">section title-2</h1>
+            <ul id="second-list">
+                <li>list item-1</li>
+                <li>list item-2</li>
+                <li>list item-3</li>
+                <li>list item-4</li>
+            </ul>
+        </section>
+        <section>
+            <h1 class="section-title">section title-3</h1>
+            <ul>
+                <li>list item-1</li>
+                <li>list item-2</li>
+                <li>list item-3</li>
+                <li>list item-4</li>
+            </ul>
+        </section>
+    
+    </main>
+    <script>
+        function makeRed(){
+    document.body.style.backgroundColor ='red';
+    }
+    </script>
+    <script src="js/first.js"></script>
+    <script src="js/second.js"></script>
+    <script src="js/third.js"></script>
+</body>
+</html>
