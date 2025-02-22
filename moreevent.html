@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+<body>
+    <!-- Heading -->
+    <h1>Explore more event</h1>
+
+    <!-- A button with ID 'btn-more' (not used in the script) -->
+    <button id="btn-more">events</button>
+
+    <!-- Input field where events will be triggered -->
+    <input type="text" id="input-field">
+    
+    <script>
+        // Selects the input field element using its ID
+        let inputField = document.getElementById('input-field');
+
+        // Adds an event listener for the 'focus' event (when the input field is clicked)
+        // inputField.addEventListener('focus', function () {
+        //     console.log('Focus event triggered inside the input field');
+        // });
+
+        // Adds an event listener for the 'blur' event (when the input field loses focus)
+        // inputField.addEventListener('blur', function () {
+        //     console.log('Blur event triggered inside the input field');
+        // });
+
+        // Adds an event listener for the 'keydown' event (when any key is pressed down)
+        // inputField.addEventListener('keydown', function (event) {
+        //     console.log('Keydown event triggered:', event.key);
+        // });
+
+        // Adds an event listener for the 'keypress' event (when a key is pressed, excluding some special keys)
+        // inputField.addEventListener('keypress', function (event) {
+        //     console.log('Keypress event triggered:', event.key);
+        // });
+
+        // Adds an event listener for the 'keyup' event (when a key is released)
+        inputField.addEventListener('keyup', function (event) {
+            console.log('Keyup event triggered:', event.key);
+        });
+    </script>
+</body>
+
+
+</html>

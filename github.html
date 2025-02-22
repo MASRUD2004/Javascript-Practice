@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- A heading element with an ID 'secret-info', which will be hidden when the delete button is clicked -->
+    <h1 id="secret-info">My second info</h1>
+
+    <!-- Input field where the user must type 'delete' to enable the delete button -->
+    <input id="delete-confirm" type="text" placeholder="please type delete">
+
+    <!-- Delete button, initially disabled -->
+    <button id="btn-delete" disabled>Delete</button>
+
+    <script>
+        // Adds an event listener to the input field for the 'keyup' event
+        document.getElementById('delete-confirm').addEventListener('keyup', function(event) {
+            const text = event.target.value; // Gets the text typed in the input field
+            const deleteButton = document.getElementById('btn-delete'); // Selects the delete button
+
+            // If the user types exactly 'delete', enable the button
+            if (text === "delete") {
+                deleteButton.removeAttribute('disabled');
+            } else {
+                // Otherwise, keep the button disabled
+                deleteButton.setAttribute('disabled', true);
+            }
+        });
+
+        // Adds an event listener to the delete button to hide the heading when clicked
+        document.getElementById('btn-delete').addEventListener('click', function() {
+            const secret = document.getElementById('secret-info'); // Selects the heading
+            secret.style.display = 'none'; // Hides the heading
+        });
+    </script>
+</body>
+
+</html>
