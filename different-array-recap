@@ -1,0 +1,16 @@
+// task:add 100 to each apple product
+
+const products=[
+    {id:1,name:"i-phone",color:'black',price:1200,brand:'apple'},
+    {id:2,name:"note 13",color:'gold',price:200,brand:'Redmi'},
+    {id:3,name:"S-23 ultra",color:'white',price:1200,brand:'Samsung'},
+    {id:4,name:"Rog ally",color:'gold',price:1200,brand:'Asus'},
+    {id:5,name:"i-phone",color:'gold',price:1000,brand:'apple'},
+]
+const newProducts=products.map(p=>{
+    if(p.brand === "apple"){
+        p.price= p.price +100;
+    }
+    return p
+})
+console.log(newProducts)
